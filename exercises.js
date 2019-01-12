@@ -73,6 +73,15 @@ console.log(login('test123'));
  * Console.log your result.
 */
 
+function isGreaterThan(first, second){
+  if(first > second){
+    return 'true'
+  } else{
+    return 'false'
+  }
+}
+
+console.log(isGreaterThan(10, 5));
 
 
 /*
