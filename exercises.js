@@ -96,7 +96,15 @@ console.log(isGreaterThan(10, 5));
  * Console.log your result.
 */
 
+function mustBeTrue(boo){
+  if(boo === true){
+    return 'true'
+  } else {
+    return 'false'
+  }
+}
 
+console.log('mustBeTrue:', mustBeTrue(5<7));
 
 /*
  * #5
