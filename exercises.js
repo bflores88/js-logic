@@ -331,7 +331,24 @@ console.log('speed:', moneyTrain(75));
  * Console.log budget and doughnutBought again.
 */ 
 
+var budget = 25;
+var doughnutPrice = 1;
+var doughnutBought = 0;
 
+function buyDoughnut(){
+  if (budget > doughnutPrice){
+    budget -= doughnutPrice;
+    doughnutBought++;
+  }
+}
+
+(buyDoughnut())
+console.log(budget);
+console.log(doughnutBought);
+
+(buyDoughnut())
+console.log(budget);
+console.log(doughnutBought);
 
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
