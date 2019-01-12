@@ -303,6 +303,19 @@ console.log('graduation:', graduation(100, 100));
  * Console.log your result.
 */ 
 
+function moneyTrain(speed){
+  if(speed < 50){
+    return "You are riding Honolulu's rail.";
+  } else if (speed < 100){
+    return 'You are riding an Amtrak.';
+  } else {
+    return "Now you ballin' in the Shinkansen!";
+  }
+
+}
+
+console.log('speed:', moneyTrain(75));
+
 
 /*
  * #14
@@ -317,6 +330,8 @@ console.log('graduation:', graduation(100, 100));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+
+
 
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
