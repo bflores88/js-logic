@@ -32,8 +32,7 @@ console.log('another test')
 */
 
 function canVote(age){
-  if(age >= 18);
-  return 'true';
+  return age >= 18;
 }
 
 console.log('canVote:', canVote(21));
@@ -51,14 +50,12 @@ console.log('canVote:', canVote(21));
 */
 
 function login(password){
-  if(password === 'test1234'){
+  if (password === 'test1234'){
     return 'Login Success!';
-  } else {
-    return 'Incorrect Password'
-  }
+  } 
+  return 'Incorrect Password';
 }
-
-console.log(login('test123'));
+console.log('login:', login('test1234'));
 
 /*
  * #3
@@ -74,14 +71,10 @@ console.log(login('test123'));
 */
 
 function isGreaterThan(first, second){
-  if(first > second){
-    return 'true'
-  } else{
-    return 'false'
-  }
+  return first > second;
 }
 
-console.log(isGreaterThan(10, 5));
+console.log('isGreaterThan:', isGreaterThan(1, 5));
 
 
 /*
@@ -97,11 +90,7 @@ console.log(isGreaterThan(10, 5));
 */
 
 function mustBeTrue(boo){
-  if(boo === true){
-    return 'true'
-  } else {
-    return 'false'
-  }
+  return boo;
 }
 
 console.log('mustBeTrue:', mustBeTrue(5<7));
@@ -150,7 +139,7 @@ function isEqual(first, second){
   }
 }
 
-console.log(isEqual('meow', 'woof'));
+console.log(isEqual('meow', 'meow'));
 
 /*
  * #7
@@ -188,14 +177,10 @@ console.log(notEqual('hello', 'hello'));
 */ 
 
 function spareChange(money){
-  if(money > 100){
-    return 'true';
-  } else {
-    return 'false';
-  }
+  return money > 100;
 }
 
-console.log('spareChange:', spareChange(95));
+console.log('spareChange:', spareChange(101));
 
 /*
  * #9
@@ -213,14 +198,10 @@ console.log('spareChange:', spareChange(95));
 
 function dirty30(one, two, three){
   var sumThree = one + two + three;
-  if(sumThree > 30){
-    return 'true';
-  } else {
-    return 'false';
-  }
+  return sumThree > 30;
 }
 
-console.log('dirty30:', dirty30(10, 21, 10));
+console.log('dirty30:', dirty30(4, 1, 1));
 
 /*
  * #10
@@ -235,14 +216,10 @@ console.log('dirty30:', dirty30(10, 21, 10));
 */ 
 
 function evenStevens(num){
-  if(num%2 === 0){
-    return 'true';
-  } else{
-    return 'false'
-  }
+  return num%2 === 0;
 }
 
-console.log('evenStevens:', evenStevens(36));
+console.log('evenStevens:', evenStevens(35));
 
 /*
  * #11
@@ -259,13 +236,12 @@ console.log('evenStevens:', evenStevens(36));
 
 function daClub(cover, age){
   if(cover>=21 && age>=21){
-    return 'Welcome to the Legends Lounge.'
-  } else {
-    return "Chuck E Cheese is across the street."
+    return 'Welcome to the Legends Lounge.';
   }
+  return "Chuck E Cheese is across the street.";
 }
 
-console.log('daClub:', daClub(20, 21))
+console.log('daClub:', daClub(20, 21));
 
 /*
  * #12
@@ -311,7 +287,6 @@ function moneyTrain(speed){
   } else {
     return "Now you ballin' in the Shinkansen!";
   }
-
 }
 
 console.log('speed:', moneyTrain(75));
@@ -354,37 +329,64 @@ console.log(doughnutBought);
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
 
-  var dailySpecials = 'Monday';
-  var special = null;
-  
-  switch (dailySpecials) {
-    case 'Monday':
-    special = 'spicy ahi don';
-      break;
-    case 'Tuesday':
-    special = 'misoyaki butterfish';
-      break;
-    case 'Wednesday' :
-    special = 'gyudon';
-      break;
-    case 'Thursday' :
-    special = 'okonomiyaki';
-      break;
-    case 'Friday' :
-    special = 'tonkotsu ramen';
-      break;
-    case 'Saturday' :
-    special = 'beef sukiyaki';
-      break;
-    default: 
-    special = 'takoyaki';
-  
-  }
+//version 1/
 
-  
-  console.log(special); 
-  
-  
+function dailySpecial1(special1){
+  var day;
+  switch (special1) {
+    case 'spicy ahi don':
+      day = 'Monday';
+      break;
+    case 'misoyaki butterfish':
+      day =  'Tuesday';
+      break;
+    case 'gyudon':
+      day =  'Wednesday';
+      break;
+    case 'okonomiyaki':
+      day =  'Thursday';
+      break;
+    case 'takoyaki':
+      day =  'Friday';
+      break;
+    case 'beef sukiyaki':
+      day =  'Saturday';
+      break;
+    case 'dim sum':
+      day =  'Sunday';
+      break;
+    default:
+      day =  "Not a special on any day.";
+  }
+  return day
+}
+
+console.log('dailySpecial1:', dailySpecial1('takoyaki'))
+
+//version 2/
+
+function dailySpecial(special){
+  switch (special) {
+    case 'spicy ahi don':
+      return 'Monday';
+    case 'misoyaki butterfish':
+      return 'Tuesday';
+    case 'gyudon':
+      return 'Wednesday';
+    case 'okonomiyaki':
+      return 'Thursday';
+    case 'takoyaki':
+      return 'Friday';
+    case 'beef sukiyaki':
+      return 'Saturday';
+    case 'dim sum':
+      return 'Sunday';
+    default:
+      return "Not a special on any day.";
+  }
+}
+
+console.log('dailySpecial:', dailySpecial('dim sum'));
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
