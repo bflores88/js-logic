@@ -507,19 +507,35 @@ allStars(players);
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+//version 1/
+
 function subways(special){
   for (var i =0; i<special.length; i++){
     if(i%2 === 1){
-      special.splice(0, 0, 'Classic Tuna');
-      
+      console.log(special[i]);
+      special[i] = "Classic Tuna";
     }
-
   }
-  console.log(special);
+  return special;
 }
 
 subways(subOftheDay);
+console.log(subOftheDay);
 
+//version 2/
+
+function subways1(special1){
+  for (var i =0; i<special1.length; i++){
+    if(i%2 === 1){
+      special1.splice(i, 1, 'Classic Tuna');
+      special1[i] = 'Classic Tuna'
+    }
+  }
+  return special1;
+}
+
+(subways1(subOftheDay));
+console.log(subOftheDay);
 
 /*
 Final Boss
