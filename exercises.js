@@ -177,10 +177,15 @@ console.log(notEqual('hello', 'hello'));
 */ 
 
 function spareChange(money){
-  return money > 100;
+  if(money > 100){
+    return true;
+  } else {
+    return false;
+  }
+  
 }
 
-console.log('spareChange:', spareChange(101));
+console.log('spareChange:', spareChange(90));
 
 /*
  * #9
@@ -258,14 +263,14 @@ console.log('daClub:', daClub(20, 21));
 
 
 function graduation(credits, thesis){
-  if(credits >= 120 || thesis >=120){
+  if(credits >= 120 || thesis === true){
     return 'Congratulations on a job well done.';
   } else {
     return 'See you in summer school.';
   }
 }
 
-console.log('graduation:', graduation(100, 100));
+console.log('graduation:', graduation(100, 0>1));
 
 /*
  * #13
@@ -318,12 +323,12 @@ function buyDoughnut(){
 }
 
 (buyDoughnut())
-console.log(budget);
-console.log(doughnutBought);
+console.log('budget:', budget);
+console.log('doughnutBought:', doughnutBought);
 
 (buyDoughnut())
-console.log(budget);
-console.log(doughnutBought);
+console.log('budget:', budget);
+console.log('doughnutBought:', doughnutBought);
 
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
