@@ -419,12 +419,21 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+var playerNumbers = [1, 2, 3, 4, 5]
+
+for (var i = 0; i<playerNumbers.length; i++){
+  console.log('Player: ' + playerNumbers[i]);
+}
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+
+  for (var i = 0; i<myFavFoods.length; i++){
+    console.log(myFavFoods[i]);
+  }
 
 
 /*
@@ -442,7 +451,17 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
+var numArray = [2, 3, 10, 4, 8];
+var total = 0;
 
+function sumItUp(arr){
+  for (var i = 0; i < arr.length; i++){
+    total+= arr[i];
+  }
+  return total;
+}
+
+console.log(sumItUp(numArray))
 
 /*
  * #18
@@ -457,6 +476,23 @@ for (var i = 0; i<toyotaModels.length; i++){
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+east = [];
+west = [];
+
+function allStars(ballers){
+  for (var i = 0; i<ballers.length; i++){
+    if(i%2 === 0){
+      east.push(ballers[i]);
+    } else {
+      west.push(ballers[i]);
+    }
+  }
+  console.log(east);
+  console.log(west);
+}
+allStars(players);
+
 /*
  * #19
  * Function - subways
@@ -470,6 +506,19 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+
+function subways(special){
+  for (var i =0; i<special.length; i++){
+    if(i%2 === 1){
+      special.splice(0, 0, 'Classic Tuna');
+      
+    }
+
+  }
+  console.log(special);
+}
+
+subways(subOftheDay);
 
 
 /*
