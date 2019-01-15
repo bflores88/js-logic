@@ -316,17 +316,17 @@ var doughnutPrice = 1;
 var doughnutBought = 0;
 
 function buyDoughnut(){
-  if (budget > doughnutPrice){
+  if (budget >= doughnutPrice){
     budget -= doughnutPrice;
     doughnutBought++;
   }
 }
 
-(buyDoughnut())
+(buyDoughnut());
 console.log('budget:', budget);
 console.log('doughnutBought:', doughnutBought);
 
-(buyDoughnut())
+(buyDoughnut());
 console.log('budget:', budget);
 console.log('doughnutBought:', doughnutBought);
 
@@ -337,7 +337,6 @@ Inside the function, create a switch statement that will check the daily special
 //version 1/
 
 function dailySpecial1(special1){
-  var day;
   switch (special1) {
     case 'spicy ahi don':
       day = 'Monday';
